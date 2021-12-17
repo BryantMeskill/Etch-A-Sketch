@@ -1,0 +1,12 @@
+/*Apply a box layout model to all elements while still allowing components to change. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+.title {
+  color: aliceblue;
+}
