@@ -4,33 +4,40 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(46, 45, 45);
 }
 
 .title {
   color: aliceblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
   flex-wrap: wrap;
+  width: 40%;
+  height: 60vh;
 }
 
 .grid {
-  display: flex;
-  flex: 0 1 50px;
   border: solid 1px aliceblue;
-  width: 50px;
-  height: 50px;
-  margin: 2px;
+  width: 5.8%;
+  margin: 0.2%;
 }
 
 .grid:hover {
   transform: scale(1.1);
+}
+
+.trail {
+  background-color: white;
+}
+
+.grid-button {
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 10px;
 }
