@@ -16,16 +16,20 @@ body {
 }
 
 .container {
+  border: solid 1px aliceblue;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  width: 40%;
-  height: 60vh;
+  width: 500px;
+  height: 500px;
+  min-width: none;
+  overflow: hidden;
 }
 
 .grid {
+  display: flex;
+  flex: 1 0 auto;
   border: solid 1px aliceblue;
-  width: 5.8%;
-  margin: 0.2%;
 }
 
 .grid:hover {
@@ -33,7 +37,7 @@ body {
 }
 
 .trail {
-  background-color: white;
+  background-color: aliceblue;
 }
 
 .grid-button {
