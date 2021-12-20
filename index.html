@@ -9,7 +9,14 @@
   </head>
   <body>
     <h1 class="title">Etch-A-Sketch</h1>
-    <button class="grid-button" onclick="createGrid()">Create New Grid</button>
+    <div class="buttons">
+      <button class="grid-button" onclick="createGrid()">
+        Choose Grid Size
+      </button>
+      <input type="range" min="2" max="64" value="16" class="user-input" />
+      <p>Current Value: <span class="value"></span></p>
+    </div>
+
     <div class="container"></div>
     <script src="./scriptEtch.js"></script>
   </body>
