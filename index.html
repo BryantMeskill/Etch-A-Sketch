@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-A-Sketch!</title>
     <link rel="stylesheet" href="./stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;200;400;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1 class="title">Etch-A-Sketch</h1>
-    <div class="buttons">
-      <button class="grid-button" onclick="createGrid()">
-        Choose Grid Size
-      </button>
-      <input type="range" min="2" max="64" value="16" class="user-input" />
-      <p>Current Value: <span class="value"></span></p>
-    </div>
-
     <div class="container"></div>
+    <div class="buttons">
+      <button class="grid-button" onclick="createGrid()">Change Size</button>
+      <input type="range" min="2" max="64" value="16" class="slider" />
+      <span class="value"></span>
+    </div>
     <script src="./scriptEtch.js"></script>
   </body>
 </html>
