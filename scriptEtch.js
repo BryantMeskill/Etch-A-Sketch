@@ -1,37 +1,25 @@
 const container = document.querySelector(".container");
 const gridButton = document.querySelector("grid-button");
-const sizeSlider = document.querySelector("user-input");
+const slider = document.querySelector(".slider");
+const output = document.querySelector(".value");
+output.innerHTML = slider.value;
+slider.addEventListener("input", () => {
+  output.innerHTML = slider.value;
+});
 
-for (let i = 0; i < 16; i++) {
-  const gridRow = document.createElement("div");
-  container.appendChild(gridRow);
-  for (let i = 0; i < 16; i++) {
-    const gridBox = document.createElement("div");
-    gridBox.classList.add("grid");
-    gridBox.style.width = `${500 / 16}px`;
-    gridBox.style.height = `${500 / 16}px`;
-    gridRow.appendChild(gridBox);
-    gridBox.addEventListener("mouseover", () => {
-      gridBox.classList.add("trail");
-    });
-  }
-}
+createGrid();
 
-function createGrid(userInput) {
+function createGrid() {
   //selects all elements with the 'grid' class, and for each one, removes it from the DOM.
   document.querySelectorAll(".grid").forEach((e) => e.remove());
-  userInput = prompt("Please input new grid size.", 16);
-  while (userInput > 100 || isNaN(userInput) === true) {
-    userInput = prompt("Please input new grid size. Max is 100.");
-  }
-  for (let i = 0; i < userInput; i++) {
+  for (let i = 0; i < slider.value; i++) {
     const gridRow = document.createElement("div");
     container.appendChild(gridRow);
-    for (let i = 0; i < userInput; i++) {
+    for (let i = 0; i < slider.value; i++) {
       const gridBox = document.createElement("div");
       gridBox.classList.add("grid");
-      gridBox.style.width = `${500 / userInput}px`;
-      gridBox.style.height = `${500 / userInput}px`;
+      gridBox.style.width = `${500 / slider.value}px`;
+      gridBox.style.height = `${500 / slider.value}px`;
       gridRow.appendChild(gridBox);
       gridBox.addEventListener("mouseover", () => {
         gridBox.classList.add("trail");
@@ -39,3 +27,6 @@ function createGrid(userInput) {
     }
   }
 }
+
+//TODO
+function rainbowMode() {}
