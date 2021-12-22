@@ -8,17 +8,27 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(46, 45, 45);
+  background-color: rgb(48, 47, 47);
 }
 
 .title {
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", "cursive";
   font-size: 50px;
   color: aliceblue;
+  animation: slide-left 0.4s;
+  margin: 0px;
+}
+
+.subtitle {
+  font-family: "roboto", sans-serif;
+  font-size: 20px;
+  color: aliceblue;
+  animation: slide-left 0.4s;
 }
 
 .container {
-  border: solid 1px aliceblue;
+  background-color: rgb(170, 170, 170);
+  border: groove 5px #3882f6;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -26,6 +36,33 @@ body {
   height: 500px;
   min-width: none;
   overflow: hidden;
+  cursor: crosshair;
+  animation: slide-left 0.6s;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: 200px;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+
+.shake {
+  animation: shake 0.7s;
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 120px;
+  }
+
+  25% {
+    margin-right: 120px;
+  }
 }
 
 .grid {
@@ -42,27 +79,40 @@ body {
   background-color: aliceblue;
 }
 
-.buttons {
-  padding: 5px;
+.trail:hover {
+  box-shadow: 0 0 1rem #3882f6;
 }
 
-.grid-button {
+button {
   font-family: "roboto", sans-serif;
   background-color: #3882f6;
   border: solid 1px;
   color: #f9faf8;
   padding: 5px;
-  margin-bottom: 15px;
   border-radius: 10px;
+  animation: slide-left 0.8s;
 }
 
-.grid-button:hover {
+button:hover {
   background: #f9faf8;
   color: #3882f6;
-  transition: 0.5s;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.erase {
+  margin-top: 15px;
 }
 
 .slider {
+  margin-top: 15px;
   width: 200px;
-  background-color: #3882f6;
+  transition: opacity 0.5s;
+  fill: #3882f6;
+  cursor: grab;
+}
+
+.value {
+  color: #f9faf8;
+  font-size: 20px;
 }
