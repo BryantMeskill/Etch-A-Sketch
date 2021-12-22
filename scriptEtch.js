@@ -1,7 +1,7 @@
 const container = document.querySelector(".container");
-const gridButton = document.querySelector("grid-button");
 const slider = document.querySelector(".slider");
 const output = document.querySelector(".value");
+const rainbowBtn = document.querySelector("rainbow");
 output.innerHTML = slider.value;
 slider.addEventListener("input", () => {
   output.innerHTML = slider.value;
@@ -28,5 +28,10 @@ function createGrid() {
   }
 }
 
-//TODO
-function rainbowMode() {}
+function eraseGrid() {
+  container.classList.remove("shake"); // reset animation
+  void container.offsetWidth; // trigger reflow
+  container.classList.add("shake"); // start animation
+  let gridBox = document.querySelectorAll(".grid").forEach((e) => e.remove());
+  createGrid();
+}
