@@ -83,6 +83,10 @@ body {
   box-shadow: 0 0 1rem #3882f6;
 }
 
+.rgb-trail:hover {
+  box-shadow: 0 0 1rem #fffb00;
+}
+
 button {
   font-family: "roboto", sans-serif;
   font-weight: bold;
