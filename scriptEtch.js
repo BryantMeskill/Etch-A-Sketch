@@ -36,3 +36,19 @@ function eraseGrid() {
   document.querySelectorAll(".row").forEach((e) => e.remove());
   createGrid();
 }
+
+function getRGB() {
+  const rgb = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+  const r = rgb(0, 255);
+  const g = rgb(0, 255);
+  const b = rgb(0, 255);
+  return `rgb(${r},${g},${b})`; // Collect all to a css color string
+}
+
+function rainbowMode() {
+  let gridBox = document.querySelectorAll(".grid").forEach((element) => {
+    element.addEventListener("mouseover", () => {
+      element.style.backgroundColor = `${getRGB()}`;
+    });
+  });
+}
