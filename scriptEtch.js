@@ -37,6 +37,7 @@ function eraseGrid() {
   createGrid();
 }
 
+/* WIP for a later date. Works, but stops working when changing grid size or erasing. Need to rewrite createGrid() to remove mouseover from it.
 function getRGB() {
   const rgb = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
   const r = rgb(0, 255);
@@ -52,3 +53,4 @@ function rainbowMode() {
     });
   });
 }
+*/
